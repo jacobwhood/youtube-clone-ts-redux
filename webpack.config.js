@@ -21,13 +21,13 @@ module.exports = {
       loader: 'ts-loader'
     },
     {
-      enforce: "pre",
+      enforce: 'pre',
       test: /\.js$/,
-      loader: "source-map-loader"
+      loader: 'source-map-loader'
     },
     {
       test: /\.css$/,
-      loader: ["style-loader", "css-loader"]
+      loader: ['style-loader', 'css-loader']
     }
     ]
   },
