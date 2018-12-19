@@ -8,12 +8,12 @@ helpful article found here: https://hackernoon.com/react-with-typescript-and-web
 npm i
 ````
 
-development:
+Development:
 ```
 npm run start-dev
 ```
 
-production:
+Production:
 ```
 npm run start
 ```
