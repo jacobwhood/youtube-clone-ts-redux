@@ -7,13 +7,17 @@ helpful article found here: https://hackernoon.com/react-with-typescript-and-web
 ```
 npm i
 ````
-```
-npm start
-```
-or
+
+development:
 ```
 npm start-dev
 ```
+
+production:
+```
+npm start
+```
+
 
 ### Prerequisites
 
