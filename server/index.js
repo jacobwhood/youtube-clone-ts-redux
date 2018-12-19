@@ -2,7 +2,7 @@ require('dotenv').config();
 const path = require('path');
 const express = require('express');
 const webpack = require('webpack');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 const webpackConfig = require('../webpack.config.js');
 const app = express();
 const port = process.env.PORT || 3000;
