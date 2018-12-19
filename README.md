@@ -10,12 +10,12 @@ npm i
 
 development:
 ```
-npm start-dev
+npm run start-dev
 ```
 
 production:
 ```
-npm start
+npm run start
 ```
 
 
