@@ -36,5 +36,10 @@ module.exports = {
       template: path.resolve(__dirname, 'client', 'src', 'assets', 'index.html')
     }),
     new webpack.HotModuleReplacementPlugin()
-  ]
+  ],
+  node: {
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
+  }
 };
