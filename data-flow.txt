@@ -1,0 +1,17 @@
+Data in state:
+  - Videos
+  - currentVideo (to populate iframe for videoPlayer)
+
+Search
+  - get search term from input ref
+  - set up a debounced searchYouTube function that will be invoked when SEARCH_YOUTUBE action is dispatched
+    - update videos in app state upon receiving response from API
+  - won't need mapStateToProps, only mapDispatchToProps
+
+VideoList
+  - get videos from app state and render 
+
+
+actions:
+  - searchYouTube
+  - changeCurrentVideo
