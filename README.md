@@ -20,7 +20,7 @@ npm run start
 
 
 ### Prerequisites
-
+```
 "dependencies": {
     "express": "^4.16.4",
     "react": "^16.6.3",
@@ -45,7 +45,7 @@ npm run start
     "webpack-dev-middleware": "^3.4.0",
     "webpack-hot-middleware": "^2.24.3"
   }
-  
+```
 ### Installing
 
 ```
