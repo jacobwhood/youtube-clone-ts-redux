@@ -22,6 +22,7 @@ npm run start
 ### Prerequisites
 ```
 "dependencies": {
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
