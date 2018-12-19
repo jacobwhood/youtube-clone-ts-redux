@@ -1,0 +1,26 @@
+{
+  "name": "youtube-clone-ts-redux",
+  "version": "1.0.0",
+  "description": "App to Search and watch YouTube video using React, Redux, TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobwhood/youtube-clone-ts-redux.git"
+  },
+  "author": "Jacob Hood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacobwhood/youtube-clone-ts-redux/issues"
+  },
+  "homepage": "https://github.com/jacobwhood/youtube-clone-ts-redux#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1"
+  }
+}
