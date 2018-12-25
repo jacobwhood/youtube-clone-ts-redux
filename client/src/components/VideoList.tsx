@@ -1,8 +1,17 @@
 import * as React from 'react';
+import { VideoListResult } from './VideoListResult';
 
-
-export const VideoList: React.FunctionComponent = () => (
+const VideoList: React.FunctionComponent = () => (
   <div className='video-list-container'>
-  
+    <div>
+      <VideoListResult />
+      <VideoListResult />
+      <VideoListResult />
+      <VideoListResult />
+      <VideoListResult />
+      <VideoListResult />
+    </div>
   </div>
 );
+
+export default VideoList;
