@@ -1,4 +1,54 @@
 body {
-  background-color: #99cc00;
-  padding: 10px;
+  padding-top: 10vh;
+  background-color: black;
+  color: grey;
+}
+
+.search-container {
+  margin: auto;
+  overflow: scroll;
+  width: fit-content;
+  padding: 2vh;
+}
+
+#search-input {
+  min-width: 80vh;
+}
+
+.video-player-container {
+  margin: auto;
+  min-height: 90vh;
+  min-width: 60%;
+  float: left;
+  padding: 5vh;
+}
+
+iframe {
+  min-width: 90vh;
+  min-height: 60vh;
+}
+
+.video-list-container {
+  min-width: 40%;
+  max-height: 90vh;
+  float: right;
+  overflow: scroll;
+  padding: 3vh 1vh;
+}
+
+.video-list-result-container {
+  margin-bottom: .5vh;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.video-list-result-text {
+  float: right;
+  justify-content: center;
+  min-width: 60%;
+}
+
+img {
+  min-width: 20vh;
+  min-height: 15vh;
 }
