@@ -1,12 +1,21 @@
 import * as React from 'react';
+import { VideoResult } from '../types/types';
 
 
-export const VideoListResult: React.FunctionComponent = (props) => (
+interface IVideoListResultProps {
+  video: VideoResult;
+  key: string;
+  onClick: (e: React.SyntheticEvent) => void;
+}
+
+export const VideoListResult: React.FunctionComponent<IVideoListResultProps> = (props) => (
   <div className='video-list-result-container'>
-    <img src='https://i.ytimg.com/vi/608Qz9Sd0UU/default.jpg'/>
+    <img src={props.video.thumbnail_url}/>
     <div className='video-list-result-text'>
-      <h4>Video Title</h4>
-      <p>Video description</p>
+      <a href='#' style={{color: 'inherit'}}>
+        <h4 onClick={props.onClick}>{props.video.title}</h4>
+      </a>
+      <p>{props.video.description}</p>
     </div>
   </div>
 );
