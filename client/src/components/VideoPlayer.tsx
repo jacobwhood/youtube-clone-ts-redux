@@ -1,14 +1,24 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 
+import { VideoResult, State } from '../types/types';
 
-const VideoPlayer: React.FunctionComponent = (props) => (
-  <div className='video-player-container'>
-    <iframe src='https://www.youtube.com/embed/HoXatYjoos8'></iframe>
-    <div>
-      <h3>Video Title</h3>
-      <p>Video description</p>
+interface IVideoPlayerProps {
+  video: VideoResult;
+}
+
+const VideoPlayer: React.FunctionComponent<IVideoPlayerProps> = ({ video }) => (
+    <div className='video-player-container'>
+      <iframe src={`https://www.youtube.com/embed/${video.videoId}`}></iframe>
+      <div className='video-player-container-text'>
+        <h4>{video.title}</h4>
+        <p>{video.description}</p>
+      </div>
     </div>
-  </div>
-);
+  );
 
-export default VideoPlayer;
+const mapStateToProps = (state: State) => ({
+  video: state.currentVideo
+});
+
+export default connect(mapStateToProps, null)(VideoPlayer);
