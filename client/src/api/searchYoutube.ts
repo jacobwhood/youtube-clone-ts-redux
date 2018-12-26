@@ -1,12 +1,7 @@
 // use as networking file --> send out network requests needed by client from server
 import axios, { AxiosRequestConfig } from 'axios';
 
-interface YouTubeAPISearchResult {
-  videoId: string;
-  title: string;
-  description: string;
-  thumbnail_url: string;
-};
+import { VideoResult } from '../types/types';
 
 /**
  * Search YouTube API for videos related to q.
@@ -25,8 +20,8 @@ export const searchYouTube = (q: string) => {
     .catch(console.log);
 };
 
-function buildYoutubeSearchResultArray(rawJSONObjects: any[]): YouTubeAPISearchResult[] {
-  let results: YouTubeAPISearchResult[] = rawJSONObjects.map(searchResult => {
+function buildYoutubeSearchResultArray(rawJSONObjects: any[]): VideoResult[] {
+  let results: VideoResult[] = rawJSONObjects.map(searchResult => {
     return {
       title: searchResult.snippet.title,
       description: searchResult.snippet.description,
