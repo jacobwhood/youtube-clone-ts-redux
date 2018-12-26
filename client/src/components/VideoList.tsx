@@ -1,17 +1,39 @@
 import * as React from 'react';
-import { VideoListResult } from './VideoListResult';
+import { connect } from 'react-redux';
+import { Dispatch, Store } from 'redux';
 
-const VideoList: React.FunctionComponent = () => (
+import { VideoListResult } from './VideoListResult';
+import { State, VideoResult } from '../types/types';
+import { updateCurrentVideo } from '../actions/actions';
+
+interface IVideoListProps {
+  videos: VideoResult[];
+  onVideoListResultClick: (video: VideoResult) => void;
+}
+
+const VideoList: React.FunctionComponent<IVideoListProps> = (props) => (
   <div className='video-list-container'>
     <div>
-      <VideoListResult />
-      <VideoListResult />
-      <VideoListResult />
-      <VideoListResult />
-      <VideoListResult />
-      <VideoListResult />
+      {props.videos.map((video: VideoResult) =>
+        <VideoListResult
+          video={video}
+          key={video.videoId}
+          onClick={(e: React.SyntheticEvent) => {
+            e.preventDefault();
+            props.onVideoListResultClick((video));
+          }}
+        />
+      )}
     </div>
   </div>
 );
 
-export default VideoList;
+const mapStateToProps = (state: State) => ({
+  videos: state.videos
+});
+
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  onVideoListResultClick: (video: VideoResult) => dispatch(updateCurrentVideo(video))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(VideoList);
