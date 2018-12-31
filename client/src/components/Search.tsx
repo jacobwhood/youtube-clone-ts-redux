@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 
 import { searchYouTubeAsync } from '../actions/actions';
@@ -8,6 +7,7 @@ import { State } from '../types/types';
 interface ISearchProps {
   onSubmitSearch: (query: string) => void;
 }
+
 
 const Search: React.SFC<ISearchProps> = ({ onSubmitSearch }) => {
   const searchInput = React.createRef<HTMLInputElement>();
