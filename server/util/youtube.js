@@ -7,7 +7,6 @@ const youtubeApi = require('googleapis').google.youtube('v3');
  * @returns {Array} Array of up to 10 objects representing related videos. 
  */
 module.exports.searchVideos = (query, cb) => {
-  console.log('query server-side method: ', query);
   const options = {
     key: process.env.YOUTUBE_API_KEY,
     maxResults: 10,
