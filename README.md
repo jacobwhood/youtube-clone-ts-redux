@@ -22,17 +22,22 @@ npm run start
 ### Prerequisites
 ```
 "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
+    "googleapis": "^36.0.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-redux": "^6.0.0",
     "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "typescript": "^3.2.2"
   },
   "devDependencies": {
     "@types/react": "^16.7.17",
     "@types/react-dom": "^16.0.11",
+    "@types/react-redux": "^6.0.11",
     "css-loader": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "source-map-loader": "^0.2.4",
