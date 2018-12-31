@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { VideoResult } from '../types/types';
 
-
 interface IVideoListResultProps {
   video: VideoResult;
   key: string;
   onClick: (e: React.SyntheticEvent) => void;
 }
+
 
 export const VideoListResult: React.FunctionComponent<IVideoListResultProps> = (props) => (
   <div className='video-list-result-container'>
