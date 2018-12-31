@@ -16,14 +16,14 @@ const reducers = (state: State = defaultState, action: Action): State => {
       return {
         ...state,
         videos: action.payload
-      }
+      };
     case UPDATE_CURRENT_VIDEO:
       return {
         ...state,
         currentVideo: action.payload
-      }
+      };
     default:
-      return state
+      return state;
   }
 };
 
