@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { Dispatch, Store } from 'redux';
+import { Dispatch } from 'redux';
 
 import { VideoListResult } from './VideoListResult';
 import { State, VideoResult } from '../types/types';
@@ -10,6 +10,7 @@ interface IVideoListProps {
   videos: VideoResult[];
   onVideoListResultClick: (video: VideoResult) => void;
 }
+
 
 const VideoList: React.FunctionComponent<IVideoListProps> = (props) => (
   <div className='video-list-container'>
