@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Search } from './Search';
+import Search from './Search';
 
 
 export const Nav: React.FunctionComponent = () => (
