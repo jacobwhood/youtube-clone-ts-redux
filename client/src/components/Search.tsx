@@ -1,20 +1,27 @@
 import * as React from 'react';
-import { searchYouTube } from '../api/searchYoutube';
+import { Dispatch } from 'redux';
+import { connect } from 'react-redux';
 
+import { searchYouTubeAsync } from '../actions/actions';
+import { State } from '../types/types';
 
-export const Search: React.SFC = () => {
+interface ISearchProps {
+  onSubmitSearch: (query: string) => void;
+}
+
+const Search: React.SFC<ISearchProps> = ({ onSubmitSearch }) => {
   const searchInput = React.createRef<HTMLInputElement>();
-
-  const handleSearch = (e: React.SyntheticEvent) => {
-    e.preventDefault();
-    if (searchInput.current) {
-      searchYouTube(searchInput.current.value);
-    }
-  };
 
   return (
     <div className='search-container'>
-      <form className='form-inline form-row align-items-center my-2 my-lg-0' id='search-form' onSubmit={handleSearch}>
+      <form
+        className='form-inline form-row align-items-center my-2 my-lg-0'
+        id='search-form'
+        onSubmit={(e) => {
+          e.preventDefault();
+          searchInput.current ? onSubmitSearch(searchInput.current.value) : null;
+        }}
+      >
         <input className='form-control mr-sm-2' type='search' id='search-input' placeholder='Search' aria-label='Search' ref={searchInput} />
         <button className='btn btn-outline-info my-2 my-sm-0' type='submit'>
           Search
@@ -23,3 +30,11 @@ export const Search: React.SFC = () => {
     </div>
   );
 };
+
+const mapStateToProps = (state: State) => ({});
+
+const mapDispatchToProps = (dispatch: any) => ({
+  onSubmitSearch: (query: string) => dispatch(searchYouTubeAsync(query))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search);
