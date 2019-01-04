@@ -21,7 +21,7 @@ const VideoList: React.FunctionComponent<IVideoListProps> = (props) => (
           key={video.videoId}
           onClick={(e: React.SyntheticEvent) => {
             e.preventDefault();
-            props.onVideoListResultClick((video));
+            props.onVideoListResultClick(video);
           }}
         />
       )}
